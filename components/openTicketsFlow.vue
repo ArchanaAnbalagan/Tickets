@@ -189,11 +189,11 @@
         class="border shadow-lg modal-container bg-white w-full h-full shadow-lg z-50 overflow-y-auto"
       >
         <div class="modal-content text-left h-full "><div class="fixed top-0 bg-white md:w-full md:px-[5%] border-b shadow-md md:block hidden">
-      <img src="public/download.png" alt="" style="height:70px;width:200px">
+      <img src="public/Goodwill-Logo.jpg" alt="" style="height:70px;width:100px;">
     </div>
           <div class="bg-[#eeeff4] py-5 md:mt-[5%]">
           <div class="flex justify-between w-full items-center container md:md:w-[90%] mx-auto">
-            <div class="p-3 md:py-6 md:roboto-black  md:roboto-bold-italic md:text-[30px]" >
+            <div class="p-3 md:py-6  md:text-[30px]" >
               Hi {{ username && username }},<br />
               We are here to help you
             </div>
@@ -209,6 +209,7 @@
             </div>
             </div>
           </div>
+         
           <div
             class="flex flex-col bg-[#eeeff4] pointer-events-auto max-w-full max-h-full h-full"
           >
@@ -666,6 +667,14 @@
               </button>
             </div>
           </div>
+           <div class=" bg-[#2A394E] text-white md:w-full  border-b shadow-md md:block hidden">
+    <div class="md:mx-auto container md:w-[90%] text-sm text-normal py-2">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere repellat obcaecati inventore, quam ipsam cupiditate minus adipisci quibusdam accusantium sint ducimus enim aspernatur necessitatibus, voluptas omnis, nemo voluptate explicabo. Ipsam.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga optio id nisi quam delectus nesciunt culpa quis. Labore porro error minima exercitationem tempore sint quae nam est dolorum, doloribus architecto.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi sint voluptatum nisi delectus, porro temporibus officiis veritatis provident facere adipisci eveniet corrupti! Ex tenetur voluptatem dolorum, earum eligendi hic eius!
+    lorem,Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolor perferendis at blanditiis animi doloribus aperiam explicabo provident obcaecati reprehenderit quisquam nam alias eveniet sint, non ullam fugit laboriosam. Numquam!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus vel cum aperiam adipisci. Obcaecati, saepe, laborum illum sapiente nostrum impedit quo quaerat laudantium soluta alias sit recusandae minus, esse cum.
+    </div></div>
         </div>
       </div>
     </div>
