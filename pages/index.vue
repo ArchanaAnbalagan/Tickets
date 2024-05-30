@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#eeeff4] min-h-screen ">
+  <div class="bg-[#eeeff4] md:bg-white min-h-screen ">
     <home/>
   </div>
 </template>

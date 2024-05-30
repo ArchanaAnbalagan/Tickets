@@ -3,9 +3,9 @@
     
     <div>
       <!-- tabs -->
-      <div class="container md:w-[90%] md:mx-auto bg-[#eeeff4] md:mt-[5%]">
+      <div class="container md:w-[90%] md:mx-auto bg-[#eeeff4] md:bg-white md:mt-[5%]">
         <div class="md:flex md:justify-between w-full md:items-center md:px-[10px]">
-          <div class="p-3 md:py-6 md:roboto-black  md:roboto-bold-italic md:text-[30px]">
+          <div class="p-3 md:py-10 md:roboto-black  md:roboto-bold-italic md:text-[30px]">
             Hi {{ username && username }},<br />
             We are here to help you
           </div>

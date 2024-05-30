@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="fixed top-0 bg-white md:w-full md:px-[5%] border-b shadow-md md:block hidden">
-      <img src="public/Goodwill-Logo.jpg" alt="" style="height:70px;width:100px">
+      <img src="public/logo-2.jpeg" alt="" >
     </div>
       <div class="bg-[#FAFBFF] min-h-screen w-full ">
     

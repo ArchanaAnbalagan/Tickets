@@ -22,7 +22,7 @@
     <!-- card -->
     <div v-if="resolvedTickets.length != 0"   class="md:flex md:gap-8 container md:mx-auto md:md:w-[90%]">
     
-    <div class="bg-[#eeeff4] md:py-5">
+    <div class="bg-[#eeeff4] md:bg-white md:py-5">
       
           </div>
       <div v-if="!loading" class="w-full md:w-[90%]">
@@ -191,9 +191,9 @@
         class="border shadow-lg modal-container bg-white w-full h-full shadow-lg z-50 overflow-y-auto"
       >
         <div class="modal-content text-left h-full"><div class="fixed top-0 bg-white md:w-full md:px-[5%] border-b shadow-md md:block hidden">
-      <img src="public/Goodwill-Logo.jpg" alt="" style="height:70px;width:100px">
+      <img src="public/logo-2.jpeg" alt="" >
     </div>
-          <div class="bg-[#eeeff4] py-4  md:mt-[5%]">
+          <div class="bg-[#eeeff4] md:bg-white py-4  md:mt-[5%]">
             <div class="flex justify-between w-full items-center container md:w-[90%] mx-auto">
             <div class="p-3 md:py-6  md:text-[30px]">
               Hi {{ username && username }},<br />
@@ -214,7 +214,7 @@
           
               
           <div
-            class="flex flex-col bg-[#eeeff4] pointer-events-auto max-w-full max-h-full h-full"
+            class="flex flex-col bg-[#eeeff4] md:bg-white pointer-events-auto max-w-full max-h-full h-full"
           >
             <!-- <div class="md:block hidden">
               <div
@@ -305,8 +305,8 @@
             </div>
             </div>
             
-            <div class="overflow-y-auto  pb-20">
-              <div class="w-full p-4">
+            <div class="md:pb-5 pb-20">
+              <div class="w-full p-4  bg-[#eeeff4] md:bg-white">
                 <div v-if="loader == true" class="container md:w-[90%] md:mx-auto">
                   <div v-for="data in 4" :key="data" class="py-2">
                     <div
@@ -377,7 +377,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="pt-2">
+                    <div class="pt-4">
                       <div
                         class="flex flex-col bg-white shadow-xl rounded-xl p-4 md:p-5"
                       >
@@ -593,7 +593,7 @@
                 </div>
                 <div class="md:block hidden mt-6">
                   <div
-                    class="flex justify-center items-center  px-2 container md:md:w-[90%] md:mx-auto "   v-if="selectedTicket.status.name == 'Awaiting Reply'"
+                    class="flex justify-start items-center   container md:w-[20%] md:ml-[5%] "   v-if="selectedTicket.status.name == 'Awaiting Reply'"
                   >
                   <div class="w-full ">
                      <button
@@ -618,7 +618,7 @@
                    </div>
                     
                   </div>
-                  <div  class="flex justify-center items-center  px-2 container md:md:w-[90%] md:mx-auto " v-else > <div class="w-full ">
+                  <div  class="flex justify-center items-center container md:md:w-[20%] md:px-[5%] " v-else > <div class="w-full ">
                      <button
                    style="width:100%"
                       @click="openRatings"
@@ -630,7 +630,34 @@
                   </div></div>
                 </div>
               </div>
+              <div
+              class="md:hidden block flex justify-end items-center gap-x-2 py-3 px-4 bg-white mt-auto fixed bottom-0 z-10 w-full"
+            >
+              <button
+                @click="openRatings"
+                type="button"
+                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-700 text-white hover:bg-[#2741b6] disabled:opacity-50 disabled:pointer-events-none"
+              >
+                Ok Thanks
+              </button>
+              <button
+                v-if="selectedTicket.status.name == 'Awaiting Reply'"
+                @click="reOpen"
+                type="button"
+                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-700 text-white hover:bg-[#2741b6] disabled:opacity-50 disabled:pointer-events-none"
+              >
+                Reopen
+              </button>
             </div>
+            </div>
+            <div class=" bg-[#2A394E] text-white md:w-full  border-b shadow-md md:block hidden">
+    <div class="md:mx-auto container md:w-[90%] text-sm py-2 text-normal">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere repellat obcaecati inventore, quam ipsam cupiditate minus adipisci quibusdam accusantium sint ducimus enim aspernatur necessitatibus, voluptas omnis, nemo voluptate explicabo. Ipsam.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga optio id nisi quam delectus nesciunt culpa quis. Labore porro error minima exercitationem tempore sint quae nam est dolorum, doloribus architecto.
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi sint voluptatum nisi delectus, porro temporibus officiis veritatis provident facere adipisci eveniet corrupti! Ex tenetur voluptatem dolorum, earum eligendi hic eius!
+    lorem,Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolor perferendis at blanditiis animi doloribus aperiam explicabo provident obcaecati reprehenderit quisquam nam alias eveniet sint, non ullam fugit laboriosam. Numquam!
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus vel cum aperiam adipisci. Obcaecati, saepe, laborum illum sapiente nostrum impedit quo quaerat laudantium soluta alias sit recusandae minus, esse cum.
+    </div></div>
             <!-- <div class="md:block hidden">
               <div
                 class="flex justify-start items-center gap-x-2 py-3 px-4 bg-white mt-auto fixed bottom-0 z-10 w-full"
@@ -654,34 +681,9 @@
                 </button>
               </div>
             </div> -->
-            <div
-              class="md:hidden block flex justify-end items-center gap-x-2 py-3 px-4 bg-white mt-auto fixed bottom-0 z-10 w-full"
-            >
-              <button
-                @click="openRatings"
-                type="button"
-                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-700 text-white hover:bg-[#2741b6] disabled:opacity-50 disabled:pointer-events-none"
-              >
-                Ok Thanks
-              </button>
-              <button
-                v-if="selectedTicket.status.name == 'Awaiting Reply'"
-                @click="reOpen"
-                type="button"
-                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg bg-blue-700 text-white hover:bg-[#2741b6] disabled:opacity-50 disabled:pointer-events-none"
-              >
-                Reopen
-              </button>
-            </div>
+            
           </div>
-          <div class=" bg-[#2A394E] text-white md:w-full  border-b shadow-md md:block hidden">
-    <div class="md:mx-auto container md:w-[90%] text-sm py-2 text-normal">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere repellat obcaecati inventore, quam ipsam cupiditate minus adipisci quibusdam accusantium sint ducimus enim aspernatur necessitatibus, voluptas omnis, nemo voluptate explicabo. Ipsam.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga optio id nisi quam delectus nesciunt culpa quis. Labore porro error minima exercitationem tempore sint quae nam est dolorum, doloribus architecto.
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi sint voluptatum nisi delectus, porro temporibus officiis veritatis provident facere adipisci eveniet corrupti! Ex tenetur voluptatem dolorum, earum eligendi hic eius!
-    lorem,Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt dolor perferendis at blanditiis animi doloribus aperiam explicabo provident obcaecati reprehenderit quisquam nam alias eveniet sint, non ullam fugit laboriosam. Numquam!
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus vel cum aperiam adipisci. Obcaecati, saepe, laborum illum sapiente nostrum impedit quo quaerat laudantium soluta alias sit recusandae minus, esse cum.
-    </div></div>
+          
         </div>
       </div>
     </div>

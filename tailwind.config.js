@@ -10,7 +10,12 @@ export default {
     "./node_modules/preline/preline.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'sm': {'max': '640px'},  // Ensure 'sm' is set correctly if customized
+      },
+    },
+  
   },
   plugins: [require("preline/plugin"), require('@tailwindcss/forms'),],
 };
